@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="quienes">
+	<div class="container">
+
+	<div class="col-md-6 offset-md-3">
+	<h1 class="titulo-registro text-center text-white">Registrate</h1>
+	<h3 class="subtitulo-registro text-white">Conviertete en un miembro de <span class="logo">Literatrus</span></h3>
+	<br/>
+
+	<form method="POST" action="" >
+		{% csrf_token %}
+		{% if form.errors %}
+				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				Your Form Has Errors
+				{% for field in form %}
+					{% if field.errors %}
+						{{ field.errors }}
+					{% endif %}
+				{% endfor %}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			{% endif %}
+		{{ form.as_p }}
+		<button type="submit" class="btn btn-secondary form-control boton-registro col-md-12">Register</button><br><br><br>
+		</form>
+	</div>
+
+</section>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock  %}
+
+{% block content  %}
+ <!-- Hero Section -->
+ <section id="hero" class="hero section">
+
+
+
+    <div class="container">
+      <div class="row justify-content-center" data-aos="zoom-out">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1 class="titulo-club-2 text-white">¿Quiénes somos?</h1>
+          <p class=" titulo-par-1"><span class="logo">Literatus</span>: <a href="about/"><small class="small-titulo">Club de lectura</small></a>  <a class="link-titulo" href="/cursos/">Talleres y Cursos</a></p>
+        </div>
+        <p class="text-white parrafo-club">Nos reunimos por los cuatro puntos cardinales de la Ciudad de México; con la única intención de comentar algun libro. Las tertulias literarias son coordinadas por el asesor literartio de la zona; ya que él es quien tiene cierta autoridad en la materia y conocimientos profundos de la obra en turno. 
+
+      </div>
+
+      <div class="row gy-4 mt-5">
+        <div class="col-md-6 col-lg-3" data-aos="zoom-out">
+          <div class="icon-box">
+            <img  class="foto" src="static/assets/img/alejandra.jpg" alt="">
+
+            <h3 class="titulo-docente"> María Alejandra Sántos</h3>
+              <p class="parrafo-docente">Egresada de la U.N.A.M. de la Licenciatura en Filosofía y Letras. 
+                Actualmente se desempeña cómo correctora de estilo en La Jormada. Ha participado
+                en diversos proyectos literarios de corte informativo para diferentes entidades en
+                la web. Así también se desempeñó como articulista de tiempo completo para la revista <strong>Algarabía</strong>
+                en la Ciudad de México.</p>
+                <h2 class="tertulias-literarias">Tertulias<span class="literatus-tertulias">literarias</span>Sábatinas</h2>
+                <p class="parrafo-docente">También es la literata encargada de coordinar la próxima tertulia sábatina de la zona sur de la Ciudad de México:</p></br>
+                <a href="#"><strong>Instrospectiva a Cien años de soledad</strong></a><br></br>
+                <span></span><a class="btn btn-primary" href="{% url 'tertulias:list' %}">Informes</a>
+
+
+                
+          </div>
+        </div><!--End Icon Box -->
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-out">
+          <div class="icon-box">
+
+              <img  class="foto" src="static/assets/img/alonso.jpg" alt="">
+
+              <h3 class="titulo-docente"> Alonso Trejo Torres</h3>
+              <p class="parrafo-docente">Egresada de la U.N.A.M. de la Licenciatura en Filosofía y Letras. 
+                Actualmente se desempeña cómo correctora de estilo en La Jormada. Ha participado
+                en diversos proyectos literarios de corte informativo para diferentes entidades en
+                la web. Así también se desempeñó como escritora de tiempo completo para la revista <strong>Algarabía</strong>
+                en la Ciudad de México. <br>
+                <h2 class="tertulias-literarias">Tertulias<span class="literatus-tertulias">literarias</span>Sábatinas</h2>
+                <p class="parrafo-docente">También es el literato encargado de coordinar la próxima tertulia sábatina de la zona norte de la Ciudad de México:</p></br>
+                <a href="#"><strong>Instrospectiva a Cien años de soledad</strong></a><br></br>
+                <span></span><a class="btn btn-primary" href="{% url 'tertulias:list' %}">Informes</a>
+
+
+          </div>
+        </div><!--End Icon Box -->
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-out">
+          <div class="icon-box">
+            <img  class="foto" src="static/assets/img/maria-1.jpg" alt="">
+            
+            <h3 class="titulo-docente"> Inés Soraya Martínez</h3>
+              <p class="parrafo-docente">Egresada de la U.N.A.M. de la Licenciatura en Filosofía y Letras. 
+                Actualmente se desempeña cómo correctora de estilo en La Jormada. Ha participado
+                en diversos proyectos literarios de corte informativo para diferentes entidades en
+                la web. Así también se desempeñó como escritora de tiempo completo para la revista <strong>Algarabía</strong>
+                en la Ciudad de México. <br>
+                <h2 class="tertulias-literarias">Tertulias<span class="literatus-tertulias">literarias</span>Sábatinas</h2>
+                <p class="parrafo-docente">También el la literata encargada de coordinar la próxima tertulia sábatina de la zona centro de Guadalajara:</p></br>
+                <a href="#"><strong>Cafeteando a Pedro Paramo</strong></a><br></br>
+                <span></span><a class="btn btn-primary" href="{% url 'tertulias:list' %}">Informes</a>
+          </div>
+        </div><!--End Icon Box -->
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-out">
+          <div class="icon-box">
+            <img  class="foto" src="static/assets/img/panito-3.jpg" alt="">
+            <h3 class="titulo-docente"> Xavier Pano Segura</h3>
+              <p class="parrafo-docente">Egresada de la U.N.A.M. de la Licenciatura en Filosofía y Letras. 
+                Actualmente se desempeña cómo correctora de estilo en La Jormada. Ha participado
+                en diversos proyectos literarios de corte informativo para diferentes entidades en
+                la web. Así también se desempeñó como escritora de tiempo completo para la revista <strong>Algarabía</strong>
+                en la Ciudad de México. <br>
+                <h2 class="tertulias-literarias">Tertulias<span class="literatus-tertulias">literarias</span>Sábatinas</h2>
+                <p class="parrafo-docente">También es el literato encargado de coordinar la próxima tertulia sábatina de la zona centro de la Ciudad de México:</p></br>
+                <a href="#"><strong>Cafeteando a Pedro Paramo</strong></a><br></br>
+                <span></span><a class="btn btn-primary" href="{% url 'tertulias:list' %}">Informes</a>
+          </div>
+        </div><!--End Icon Box -->
+
+      </div>
+    </div>
+
+  </section><!-- /Hero Section -->
+
+{% endblock  %}
