@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import pre_save
+from myproject.utils import unique_slug_generator
 
 # Create your models here.
 
@@ -10,7 +12,14 @@ class Curso(models.Model):
     lugar_curso = models.TextField()
     fecha_de_inicio = models.DateTimeField(auto_now_add=False, auto_now=False, null=True)
     costo_del_curso = models.DecimalField(max_digits=10, decimal_places=2, null=True)
-    slug = models.SlugField(null=True)
+    slug = models.SlugField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.title
+   
+
+def slug_generator(sender, instance, *args, **kwargs):
+        if not instance.slug:
+            instance.slug = unique_slug_generator(instance)
+
+pre_save.connect(slug_generator, sender=Curso)
