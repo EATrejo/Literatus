@@ -77,3 +77,23 @@ class User(AbstractBaseUser):
     
     def has_module_perms(self, app_label):
         return True
+    
+
+opciones_consultas=[
+    [0, "Me interesa coordinar tertulia literartia"],
+    [1, "Reclamo"],
+    [1, "Sugerencia"],
+    [1, "Felicitaciones"]
+]
+
+class Contacto(models.Model):
+    nombre=models.CharField(max_length=50)
+    apellido=models.CharField(max_length=50)
+    correo=models.EmailField()
+    tipo_consulta=models.IntegerField(choices=opciones_consultas)
+    mensaje=models.TextField()
+
+
+
+    def __str__(self):
+        return self.nombre

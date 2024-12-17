@@ -1,6 +1,7 @@
 
-from .models import User
+from .models import User, Contacto
 from django import forms
+
 
 
 class SignUpForm(forms.ModelForm):
@@ -19,6 +20,12 @@ class SignUpForm(forms.ModelForm):
             raise forms.ValidationError(
                 "Password does not match!"
             )
+        
+
+class ContactoForm(forms.ModelForm):
+    class Meta:
+        model = Contacto
+        fields = '__all__'
 
 """
 class SignUpForm(User):

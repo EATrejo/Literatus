@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import TertuliaForm
+from .models import  Student
 
 
-admin.site.register(TertuliaForm)
+
+admin.site.register(Student),
+

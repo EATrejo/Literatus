@@ -7,6 +7,7 @@ Login Page
 {% endblock  %}
 
 {% block content %}
+
  <!-- Hero Section -->
  <section id="hero" class="hero section" style="color: #212529;">
 
@@ -22,8 +23,8 @@ Login Page
         <div class="row">
           <div class="col-md-12 margen-superior">
               <div class="section-header text-center pb-5"><br><br>
-                  <h2 class="text-white titulo-club">Bienvenido literatu</h2><br><br>
-                  <h2 class="text-white login-text">Login</h2>
+                  <h2 class="text-white titulo-club">Bienvenido literatus</h2><br><br>
+                  <h2 class="text-white login-text">Entrar</h2>
               </div>
           </div>
         </div>
@@ -35,28 +36,36 @@ Login Page
                     {% csrf_token %}
                         <div class="mb-3">
                           <input type="text" class="form-control" name="email", placeholder="email" required>
-                            <br>
                         </div>
                         <div class="mb-3">
                           <input type="password" class="form-control" name="password", placeholder="Password" required>
                         </div>
-                        <br>
+                      
                         {% if request.GET.next %}
                           <input type="hidden" name="next" value="{{ request.GET.next }}" />
                         {% endif %}
-                        <button type="submit" class="btn btn-primary form-control boton-login">Login</button>
+                        <button type="submit" class="btn btn-primary form-control boton-login">Entrar</button>
+                        <br></br>
+                        <a class="text-white" href="{% url 'users:forgot_password' %}">Forgot password?</a>
+                        <br><br>
+
                   </form>
+                  
                 </div>
+                
               </div>
             </div>
+            
       </div>
     </div>    
       
   {% endif %}
     </div>
+
     
 
   </div>
 
 </section><!-- /Hero Section -->
+
 {% endblock  %}

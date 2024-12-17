@@ -20,8 +20,8 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #212529; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #124265; /* Color for headings, subheadings and title throughout the website */
+  --default-color: #aaa5a5; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #2780bf; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #2487ce; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #767272;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -75,7 +75,7 @@ body {
   font-family: var(--default-font);
 }
 
-a {
+a, h2 {
   color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
@@ -87,7 +87,7 @@ a:hover {
 }
 
 h1,
-h2,
+
 h3,
 h4,
 h5,
@@ -115,6 +115,13 @@ h6 {
   margin-bottom: 3rem;
 }
 
+.titulo-club{
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: -15px;
+  margin-bottom: 3rem;
+}
+
 .literatus{
   font-size: 2.5rem;
   margin-top: 6rem;
@@ -126,6 +133,36 @@ h6 {
 .small-titulo{
   font-size: 1.5rem;
   color: #ac1383;
+}
+
+.login-text{
+  font-size: 24px;
+}
+
+.image-tertulia{
+
+  margin-top: -25px;
+}
+
+
+
+.linea {
+  height: 1px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.no-mas-lugares{
+  margin-top: -27px;
+  margin-bottom: 25px;
+  padding-top: -10px;
+  font-size: 14px;
+  color: red;
+}
+
+.zona-tertulia{
+  color: black;
 }
 
 
@@ -245,7 +282,7 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: #fff;
-  padding: 20px 15px;
+  padding: 0px 15px;
   transition: all 0.5s;
   z-index: 997;
   border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
@@ -352,10 +389,13 @@ h6 {
     padding-right: 0;
   }
 
+
+
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: red;
+    text-decoration: underline;
   }
 
   .navmenu .dropdown ul {
