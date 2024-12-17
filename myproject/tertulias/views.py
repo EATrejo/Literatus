@@ -8,8 +8,7 @@ def tertulias_list(request):
     tertulias = Tertulia.objects.all()
 
 
-
     context = {
         'tertulias': tertulias,
 }
-    return render(request, 'tertulias/tertulias_list.html', context)
+    return render(request, 'tertulias/tertulias_list_copia.html', context)
